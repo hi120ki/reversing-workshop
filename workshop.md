@@ -46,4 +46,44 @@ ReversingはReverse Engineeringとも言われ、機械や製品・プログラ�
 
 ## 2-1. Linux ELFファイルを実際に作ってみる
 
+<walkthrough-editor-spotlight spotlightId="file-explorer">エクスプローラー</walkthrough-editor-spotlight>の中から`hello.c`をクリックし、表示します。
+
+```cpp
+#include <stdio.h>
+
+int main(void) {
+  printf("Hello World!\n");
+  return 0;
+}
+```
+
+このような内容が表示されます。
+
+これはC言語で書かれたソースコードで、「Hello World!」と表示するものです。
+
+このコマンドを画面下部のターミナルにコピペして、エンターキーを押してみましょう。
+
+```
+gcc hello.c -o hello
+```
+
+ターミナルでは何も表示されませんが、<walkthrough-editor-spotlight spotlightId="file-explorer">エクスプローラー</walkthrough-editor-spotlight>では`hello`というファイルが新しくできています。
+
+では同じようにこのコマンドを画面下部のターミナルにコピペして、エンターキーを押してみましょう。
+
+```
+./hello
+```
+
+すると
+
+```
+~/cloudshell_open/reversing-workshop$ ./hello
+Hello World!
+```
+
+このようにソースコードに記述されていた、「Hello World!」と表示する処理が実行されました!
+
+次のセクションでは`gcc`コマンド・`hello`ファイルの正体を解説します。
+
 ## 2-2. Linux ELFファイルで処理を実行してみる
